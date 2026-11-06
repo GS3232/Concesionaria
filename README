@@ -1,0 +1,54 @@
+# 🚗 Concesionaria de Autos y Motos 🏍️
+
+### Construyendo soluciones, organizando vehículos y aplicando programación orientada a objetos.
+
+## 🎯 Nuestro desafío
+
+Desarrollar una aplicación en Java capaz de gestionar una colección de automóviles y motocicletas, aplicando conceptos fundamentales de programación orientada a objetos, estructuras de datos y herramientas del ecosistema Spring.
+
+## 🏆 Lo que logramos
+
+A lo largo de este proyecto conseguimos:
+
+- **MODELAR** vehículos mediante una clase abstracta que reúne sus características comunes.
+- **ESPECIALIZAR** automóviles y motocicletas utilizando herencia.
+- **ESTANDARIZAR** comportamientos mediante una interfaz.
+- **ENCAPSULAR** atributos y simplificar el acceso a los datos con Lombok.
+- **IMPLEMENTAR** un criterio de orden natural utilizando `Comparable`.
+- **GESTIONAR** colecciones de vehículos mediante Collections Framework.
+- **REALIZAR** búsquedas y consultas utilizando Stream API.
+- **IDENTIFICAR** el vehículo de mayor y menor precio.
+- **LOCALIZAR** modelos que contienen la letra Y.
+- **ORDENAR** los vehículos por precio descendente y por orden natural.
+- **FORMATEAR** los precios para presentar resultados claros y legibles.
+- **VERIFICAR** funcionalidades mediante pruebas automatizadas con JUnit.
+
+## 🛠️ Tecnologías utilizadas
+
+- Java 21
+- Spring Boot
+- Maven
+- Lombok
+- Collections Framework
+- Stream API
+- JUnit 5
+
+## ▶️ Ejecución del proyecto
+
+Desde una terminal de Windows, ubicarse en la carpeta raíz del proyecto y ejecutar:
+
+```bash
+.\mvnw.cmd spring-boot:run
+```
+
+Para ejecutar las pruebas automatizadas:
+
+```bash
+.\mvnw.cmd test
+```
+
+## 💡 Resultado
+
+Una aplicación que integra los conceptos aprendidos y demuestra cómo organizar, consultar, comparar y ordenar diferentes tipos de vehículos mediante Java.
+
+**Cada clase, cada método y cada funcionalidad representan un paso más en la construcción de una solución orientada a objetos.**
