@@ -4,12 +4,10 @@ package com.proyecto.concesionaria;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.proyecto.concesionaria.operaciones.ConcesionariaService;
+
 // Importamos CommandLineRunner para ejecutar código al iniciar.
 import org.springframework.boot.CommandLineRunner;
-
-// Importamos nuestro servicio.
-import com.proyecto.concesionaria.servicio.ConcesionariaService;
-
 // Importamos la anotación para inyectar dependencias.
 import org.springframework.beans.factory.annotation.Autowired;
 

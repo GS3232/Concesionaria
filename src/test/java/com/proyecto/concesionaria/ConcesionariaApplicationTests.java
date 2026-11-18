@@ -1,6 +1,6 @@
 package com.proyecto.concesionaria;
 
-// Importamos JUnit para poder realizar pruebas automáticas.
+// Importamos JUnit para realizar pruebas automáticas.
 import org.junit.jupiter.api.Test;
 
 // Importamos las herramientas para verificar resultados.
@@ -12,68 +12,51 @@ import com.proyecto.concesionaria.entidades.Moto;
 
 class ConcesionariaApplicationTests {
 
-// Verificamos que el automóvil se cree correctamente.
-@Test
-void crearAutoCorrectamente() {
+    // Verificamos que el automóvil se cree correctamente.
+    @Test
+    void crearAutoCorrectamente() {
 
-// Creamos un automóvil Peugeot 206.
-Auto auto = new Auto("Peugeot", "206", 200000.00, 4);
+        Auto auto = new Auto("Peugeot", "206", 200000.00, 4);
 
-// Comprobamos su marca.
-assertEquals("Peugeot", auto.getMarca());
+        assertEquals("Peugeot", auto.getMarca());
+        assertEquals("206", auto.getModelo());
+        assertEquals(4, auto.getCantidadPuertas());
+        assertEquals(200000.00, auto.getPrecio());
+    }
 
-// Comprobamos su modelo.
-assertEquals("206", auto.getModelo());
+    // Verificamos que la motocicleta se cree correctamente.
+    @Test
+    void crearMotoCorrectamente() {
 
-// Comprobamos su cantidad de puertas.
-assertEquals(4, auto.getCantidadPuertas());
+        Moto moto = new Moto("Honda", "Titan", 60000.00, 125);
 
-// Comprobamos su precio.
-assertEquals(200000.00, auto.getPrecio());
-}
+        assertEquals("Honda", moto.getMarca());
+        assertEquals("Titan", moto.getModelo());
+        assertEquals(125, moto.getCilindrada());
+        assertEquals(60000.00, moto.getPrecio());
+    }
 
-// Verificamos que la motocicleta se cree correctamente.
-@Test
-void crearMotoCorrectamente() {
+    // Verificamos que la descripción del automóvil sea correcta.
+    @Test
+    void descripcionDelAutoCorrecta() {
 
-// Creamos una motocicleta Honda Titan.
-Moto moto = new Moto("Honda", "Titan", 60000.00, 125);
+        Auto auto = new Auto("Peugeot", "206", 200000.00, 4);
 
-// Comprobamos su marca.
-assertEquals("Honda", moto.getMarca());
+        assertEquals(
+                "Marca: Peugeot // Modelo: 206 // Puertas: 4 // Precio: $200.000,00",
+                auto.toString()
+        );
+    }
 
-// Comprobamos su modelo.
-assertEquals("Titan", moto.getModelo());
-// Comprobamos su cilindrada.
-assertEquals(125, moto.getCilindrada());
+    // Verificamos que la descripción de la motocicleta sea correcta.
+    @Test
+    void descripcionDeLaMotoCorrecta() {
 
-// Comprobamos su precio.
-assertEquals(60000.00, moto.getPrecio());
-}
+        Moto moto = new Moto("Honda", "Titan", 60000.00, 125);
 
-// Verificamos que la descripción del automóvil sea correcta.
-@Test
-void descripcionDelAutoCorrecta() {
-
-// Creamos el automóvil.
-Auto auto = new Auto("Peugeot", "206", 200000.00, 4);
-
-// Comprobamos la descripción generada.
-assertEquals(
-"Marca: Peugeot // Modelo: 206 // Puertas: 4 // Precio: $200.000,00",
-auto.obtenerDescripcion());
-}
-
-// Verificamos que la descripción de la motocicleta sea correcta.
-@Test
-void descripcionDeLaMotoCorrecta() {
-
-// Creamos la motocicleta.
-Moto moto = new Moto("Honda", "Titan", 60000.00, 125);
-
-// Comprobamos la descripción generada.
-assertEquals(
-"Marca: Honda // Modelo: Titan // Cilindrada: 125c // Precio: $60.000,00",
-moto.obtenerDescripcion());
-}
+        assertEquals(
+                "Marca: Honda // Modelo: Titan // Cilindrada: 125c // Precio: $60.000,00",
+                moto.toString()
+        );
+    }
 }

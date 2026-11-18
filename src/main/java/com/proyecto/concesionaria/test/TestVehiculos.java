@@ -31,7 +31,8 @@ public class TestVehiculos {
 
         // Recorremos la lista e imprimimos cada vehículo.
         for (Vehiculo vehiculo : vehiculos) {
-            System.out.println(vehiculo.obtenerDescripcion());
+            System.out.println(vehiculo);
+
         }
     }
 }
