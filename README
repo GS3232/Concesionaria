@@ -1,54 +1,33 @@
-# 🚗 Concesionaria de Autos y Motos 🏍️
+CONCESIONARIA DE AUTOS Y MOTOS
+------------------------------------------------------------
 
-### Construyendo soluciones, organizando vehículos y aplicando programación orientada a objetos.
+Este proyecto es una aplicación desarrollada en Java que simula el funcionamiento de una concesionaria. Al ejecutarse, carga un listado de autos y motos, muestra sus datos por consola con formato de moneda local, busca el vehículo más caro, el más barato y el que contiene la letra Y en su modelo, y los ordena por precio y por orden natural.
 
-## 🎯 Nuestro desafío
 
-Desarrollar una aplicación en Java capaz de gestionar una colección de automóviles y motocicletas, aplicando conceptos fundamentales de programación orientada a objetos, estructuras de datos y herramientas del ecosistema Spring.
+CONCEPTOS Y HERRAMIENTAS APLICADAS
+------------------------------------------------------------
 
-## 🏆 Lo que logramos
+Para desarrollar la solución apliqué los siguientes conceptos y herramientas de Java:
 
-A lo largo de este proyecto conseguimos:
+• Abstracción y Herencia: clase abstracta Vehiculo como base común y subclases Auto y Moto.
+• Interfaz y Polimorfismo: interfaz IGestionAutomotriz y sobrescritura de toString() para recorrer e imprimir cualquier vehículo de forma genérica.
+• Orden natural: implementación de Comparable en Vehiculo para ordenar por marca, modelo y precio.
+• Lombok: uso de @Getter y @AllArgsConstructor para evitar código repetitivo.
+• Collections y Stream API: manejo de listas (List y ArrayList) y uso de Streams para las búsquedas y ordenamientos.
 
-- **MODELAR** vehículos mediante una clase abstracta que reúne sus características comunes.
-- **ESPECIALIZAR** automóviles y motocicletas utilizando herencia.
-- **ESTANDARIZAR** comportamientos mediante una interfaz.
-- **ENCAPSULAR** atributos y simplificar el acceso a los datos con Lombok.
-- **IMPLEMENTAR** un criterio de orden natural utilizando `Comparable`.
-- **GESTIONAR** colecciones de vehículos mediante Collections Framework.
-- **REALIZAR** búsquedas y consultas utilizando Stream API.
-- **IDENTIFICAR** el vehículo de mayor y menor precio.
-- **LOCALIZAR** modelos que contienen la letra Y.
-- **ORDENAR** los vehículos por precio descendente y por orden natural.
-- **FORMATEAR** los precios para presentar resultados claros y legibles.
-- **VERIFICAR** funcionalidades mediante pruebas automatizadas con JUnit.
 
-## 🛠️ Tecnologías utilizadas
+ESTRUCTURA DEL PROYECTO
+------------------------------------------------------------
 
-- Java 21
-- Spring Boot
-- Maven
-- Lombok
-- Collections Framework
-- Stream API
-- JUnit 5
+• entidades: contiene las clases Vehiculo, Auto y Moto.
+• interfaces: contiene la interfaz IGestionAutomotriz.
+• operaciones: contiene ConcesionariaService con la lógica de carga, búsquedas, ordenamientos e impresión.
+• test: contiene TestVehiculos para ejecutar y probar el funcionamiento.
 
-## ▶️ Ejecución del proyecto
 
-Desde una terminal de Windows, ubicarse en la carpeta raíz del proyecto y ejecutar:
+CÓMO EJECUTAR EL PROYECTO
+------------------------------------------------------------
 
-```bash
-.\mvnw.cmd spring-boot:run
-```
-
-Para ejecutar las pruebas automatizadas:
-
-```bash
-.\mvnw.cmd test
-```
-
-## 💡 Resultado
-
-Una aplicación que integra los conceptos aprendidos y demuestra cómo organizar, consultar, comparar y ordenar diferentes tipos de vehículos mediante Java.
-
-**Cada clase, cada método y cada funcionalidad representan un paso más en la construcción de una solución orientada a objetos.**
+1. Abrir el proyecto en Visual Studio Code.
+2. Ir a TestVehiculos.java (dentro de test) y ejecutar con Run.
+3. Ver los resultados en la consola.
