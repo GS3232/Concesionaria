@@ -7,16 +7,16 @@ import lombok.Getter;
 @Getter
 public class Moto extends Vehiculo {
 
-    // Atributo propio de las motocicletas.
+    // Atributo propio de moto.
     private int cilindrada;
 
-    // Constructor de la motocicleta.
+    // Constructor de moto.
     public Moto(String marca, String modelo, double precio, int cilindrada) {
 
         // Enviamos los atributos comunes al constructor de Vehiculo.
         super(marca, modelo, precio);
 
-        // Asignamos el atributo propio de la motocicleta.
+        // Asignamos el atributo propio de la moto.
         this.cilindrada = cilindrada;
     }
     @Override

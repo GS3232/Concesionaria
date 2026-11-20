@@ -7,7 +7,7 @@ import lombok.Getter;
 @Getter
 public class Auto extends Vehiculo {
 
-    // Atributo propio de los automóviles.
+    // Atributo propio de auto.
     private int cantidadPuertas;
 
     // Constructor del automóvil.
@@ -16,7 +16,7 @@ public class Auto extends Vehiculo {
         // Enviamos los atributos comunes al constructor de Vehiculo.
         super(marca, modelo, precio);
 
-        // Asignamos el atributo propio del automóvil.
+        // Asignamos el atributo propio.
         this.cantidadPuertas = cantidadPuertas;
     }
 
