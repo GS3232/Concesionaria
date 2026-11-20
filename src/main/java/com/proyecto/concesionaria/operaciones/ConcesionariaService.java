@@ -15,7 +15,6 @@ public class ConcesionariaService {
         // Carga los vehículos en una lista.
         public List<Vehiculo> cargarVehiculos() {
                 List<Vehiculo> vehiculos = new ArrayList<>();
-
                 vehiculos.add(new Auto("Peugeot", "206", 200000.00, 4));
                 vehiculos.add(new Moto("Honda", "Titan", 60000.00, 125));
                 vehiculos.add(new Auto("Peugeot", "208", 250000.00, 5));
@@ -27,11 +26,12 @@ public class ConcesionariaService {
         // Impresión de los vehiculos.
         public void imprimirVehiculos(List<Vehiculo> vehiculos) {
                 System.out.println();
+                System.out.println();
                 vehiculos.forEach(System.out::println);
                 System.out.println();
-                System.out.println("=============================");
+                System.out.println("=====================================");
+                System.out.println();
         }
-
         // Busca el vehículo más caro usando API Stream
         public Optional<Vehiculo> obtenerVehiculoMasCaro(List<Vehiculo> vehiculos) {
                 return vehiculos.stream()
@@ -49,8 +49,7 @@ public class ConcesionariaService {
                 return vehiculos.stream()
                                 .filter(vehiculo -> vehiculo.getModelo()
                                                 .toUpperCase().contains("Y"))
-                                .findFirst();
-        }
+                                .findFirst();}
 
         // Ordena los vehículos por precio de mayor a menor usando API Stream
         public List<Vehiculo> ordenarPorPrecioDescendente(List<Vehiculo> vehiculos) {
@@ -78,8 +77,9 @@ public class ConcesionariaService {
                                 vehiculo -> System.out.println("Vehículo que contiene en el modelo la letra 'Y': "
                                                 + vehiculo.informarNombre()
                                                 + " $" + vehiculo.formatearPrecio()));
-
-                System.out.println("=============================");
+                System.out.println();
+                System.out.println("====================================");
+                System.out.println();
         }
 
         // Imprime los vehículos ordenados
@@ -87,12 +87,14 @@ public class ConcesionariaService {
                 System.out.println("Vehículos ordenados por precio de mayor a menor:");
                 List<Vehiculo> porPrecio = ordenarPorPrecioDescendente(vehiculos);
                 porPrecio.forEach(vehiculo -> System.out.println(vehiculo.informarNombre()));
-
-                System.out.println("=============================");
+                System.out.println();
+                System.out.println("=====================================");
+                System.out.println();
 
                 System.out.println("Vehículos ordenados por orden natural (marca, modelo, precio):");
                 List<Vehiculo> porOrdenNatural = ordenarPorOrdenNatural(vehiculos);
                 porOrdenNatural.forEach(System.out::println);
+                System.out.println();
                 System.out.println();
         }
 }
